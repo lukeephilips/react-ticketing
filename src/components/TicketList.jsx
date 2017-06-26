@@ -1,12 +1,9 @@
 import React from "react";
+import Ticket from './Ticket';
 
 function TicketList(props){
   return (
-    <div>
-      <h3>3A - Thato & Haley</h3>
-      <p><em>Firebase won't save record</em></p>
-      <hr/>
-    </div>
+    <Ticket/>
   );
 }
 
