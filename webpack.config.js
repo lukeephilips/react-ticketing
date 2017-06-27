@@ -11,10 +11,19 @@ module.exports = {
   output: {
     filename: 'app.bundle.js',
     path: resolve(__dirname, 'build'),
+    publicPath: '/'
   },
 
   resolve: {
     extensions: ['.js', '.jsx']
+  },
+
+  devtool: '#source-map',
+
+  devServer: {
+    hot: true,
+    contentBase: resolve(__dirname, 'build'),
+    publicPath: '/'
   },
 
   module: {
