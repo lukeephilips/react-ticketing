@@ -1,10 +1,11 @@
 import React from "react";
 import TicketList from './TicketList';
+import Header from './Header';
 
 function App(props){
   return (
     <div>
-      <h1>Help Queue</h1>
+      <Header/>
       <TicketList/>
     </div>
   );
