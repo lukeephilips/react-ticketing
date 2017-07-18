@@ -16,7 +16,7 @@ class NewTicketForm extends React.Component {
     console.log(newTicket);
   }
 
-  render(){
+  render() {
     return (
       <div>
         <form onSubmit={this.handleNewTicketFormSubmission}>
