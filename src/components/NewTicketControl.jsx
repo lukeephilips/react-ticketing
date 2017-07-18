@@ -1,5 +1,6 @@
 import React from "react";
 import NewTicketForm from "./NewTicketForm";
+import PropTypes from "prop-types";
 
 class NewTicketControl extends React.Component {
 
@@ -16,7 +17,7 @@ class NewTicketControl extends React.Component {
   render(){
     let formAreaContent = null;
     if (this.state.formVisibleOnPage){
-      formAreaContent = <NewTicketForm/>
+      formAreaContent = <NewTicketForm onNewTicketCreation={this.props.onNewTicketCreation}/>
     } else {
       formAreaContent = <button onClick={this.handleDisplayingNewTicketForm}>Request Help</button>;
     }
@@ -27,8 +28,11 @@ class NewTicketControl extends React.Component {
       </div>
     );
   }
+  
+}
 
-
+NewTicketControl.propTypes = {
+  onNewTicketCreation: PropTypes.func
 }
 
 export default NewTicketControl;
