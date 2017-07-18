@@ -1,5 +1,6 @@
 import React from "react";
-import Ticket from "../models/ticket.js";
+import Ticket from "../models/Ticket.js";
+
 
 class NewTicketForm extends React.Component {
 
