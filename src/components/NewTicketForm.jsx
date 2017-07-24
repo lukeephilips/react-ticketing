@@ -13,7 +13,6 @@ class NewTicketForm extends React.Component {
     event.preventDefault()
     const { _names, _location, _issue } = this.refs;
     var newTicket = new Ticket(_names.value, _location.value, _issue.value);
-    console.log(this);
     this.props.onNewTicketCreation(newTicket);
     this.props.hideFormAfterSubmission();
   }
