@@ -3,8 +3,6 @@ class Ticket {
     this.names = names;
     this.location = location;
     this.description = description;
-    this.timeOpened = new Date();
-    this.timeSinceOpened = 'just now'
   }
 }
 
