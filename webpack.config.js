@@ -57,6 +57,10 @@ module.exports = {
          modules: true,
          localIdentName: '[name]__[local]___[hash:base64:5]'
        }
+     },
+     {
+       test: resolve(__dirname, "src/styles/styles.css"),
+       loader: 'css-loader'
      }
     ]
   },
