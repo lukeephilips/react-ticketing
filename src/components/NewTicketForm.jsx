@@ -26,7 +26,7 @@ class NewTicketForm extends React.Component {
       timeOpened: new Date().getTime()
     }
     dispatch(action);
-    
+
     var newTicket = new Ticket(_names.value, _location.value, _issue.value);
     this.props.onNewTicketCreation(newTicket);
     this.props.hideFormAfterSubmission();
@@ -37,16 +37,19 @@ class NewTicketForm extends React.Component {
       <div>
         <form onSubmit={this.handleNewTicketFormSubmission}>
           <input
+            className="form-control"
             ref="_names"
             type="text"
             id="names"
             placeholder="Pair Names" />
           <input
+            className="form-control"
             ref="_location"
             type="text"
             id="location"
             placeholder="Location"/>
           <textarea
+            className="form-control"
             ref="_issue"
             type="text"
             id="issue"
