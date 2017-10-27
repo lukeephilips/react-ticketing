@@ -1,5 +1,4 @@
 import React from "react";
-import Ticket from "../models/Ticket.js";
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import c from './../constants';
@@ -27,8 +26,6 @@ class NewTicketForm extends React.Component {
     }
     dispatch(action);
 
-    var newTicket = new Ticket(_names.value, _location.value, _issue.value);
-    this.props.onNewTicketCreation(newTicket);
     this.props.hideFormAfterSubmission();
   }
 
@@ -64,7 +61,6 @@ class NewTicketForm extends React.Component {
 }
 
 NewTicketForm.propTypes = {
-  onNewTicketCreation: PropTypes.func,
   hideFormAfterSubmission: PropTypes.func
 }
 NewTicketForm = connect()(NewTicketForm);
