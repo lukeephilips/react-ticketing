@@ -5,14 +5,15 @@ import styles from './styles/styles.css';
 import { createStore } from 'redux';
 import reducer from './reducers/ticket-list-reducer';
 import { Provider } from 'react-redux';
-
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store} >
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </Provider>,
   document.getElementById('react-app-root')
 );

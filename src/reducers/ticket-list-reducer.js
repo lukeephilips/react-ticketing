@@ -4,6 +4,7 @@ export default (state = [], action) => {
   switch (action.type) {
     case c.ADD_TICKET:
       const {names, location, description, timeOpened, id} = action;
+
       return [
         ...state,
         {
@@ -14,6 +15,9 @@ export default (state = [], action) => {
           id: id
         }
       ]
+    case c.DELETE_TICKET:
+      let newState = state.filter(ticket => ticket.id !== action.id)
+      return newState;
     default:
       return state;
   }
