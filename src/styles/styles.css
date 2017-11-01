@@ -2,10 +2,19 @@
   background-color: #FFFFFD;
   font-family: sans-serif;
 }
-
+.wrapper {
+  margin: 10px;
+}
 button {
   color: white;
   border-radius: 5px;
   padding: 5px;
   background-color: maroon;
+}
+input, textarea {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: block;
 }

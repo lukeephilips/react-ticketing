@@ -9,7 +9,6 @@ class NewTicketForm extends React.Component {
 
   constructor(props){
     super(props);
-    console.log(props);
     this.handleNewTicketFormSubmission = this.handleNewTicketFormSubmission.bind(this);
   }
 
